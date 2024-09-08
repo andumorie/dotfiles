@@ -16,6 +16,14 @@ echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" 
 - We set a flag - local to the repository - to hide files we are not explicitly tracking yet. This is so that when you type config status and other commands later, files you are not interested in tracking will not show up as untracked.
 - Also you can add the alias definition by hand to your .bashrc or use the the fourth line provided for convenience.
 
+&nbsp;
+
+I've packaged the above lines into a gist so that you can set things up with:
+```
+curl -Lks https://gist.githubusercontent.com/andumorie/ff343e42cdc578ff2526165255a121c7/raw/6022e5da6d3b96dc2295bf9e4d54fdfed0e95cc7/dotfiles-init | /bin/bash
+```
+&nbsp;
+
 After you've executed the setup any file within the $HOME folder can be versioned with normal commands, replacing git with your newly created config alias, like:
 
 ```
@@ -96,3 +104,9 @@ config commit -m "Add bashrc"
 config push
 ```
 
+&nbsp;
+
+Again, as a shortcut, you can run the following command on any new machine where you want to setup the dotfiles:
+```
+curl -Lks https://gist.githubusercontent.com/andumorie/ff343e42cdc578ff2526165255a121c7/raw/6022e5da6d3b96dc2295bf9e4d54fdfed0e95cc7/dotfiles-install | /bin/bash
+```
