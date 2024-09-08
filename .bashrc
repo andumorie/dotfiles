@@ -124,3 +124,4 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+alias config='/usr/bin/git --git-dir=/home/andu/.dotfiles/ --work-tree=/home/andu'

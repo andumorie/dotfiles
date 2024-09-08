@@ -104,3 +104,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source .bash_aliases
+
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
+# fnm
+FNM_PATH="/home/andu/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
+alias config='/usr/bin/git --git-dir=/home/andu/.dotfiles/ --work-tree=/home/andu'
